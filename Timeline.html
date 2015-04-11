@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href = "Timeline.css">
+
+<title>Disk Analyzer | Arrange by Time Modified | A.K.A Timeline</title>
+
+</head>
+
+<body>
+<div class="box"/>
+<table id="layout">
+<tr>
+	<td width = "650" align="left">
+    	<nav id="top_button">       
+        	<li><a href="" class="current_dir">Last Directory</a></li>
+            <li><a href="" class="current_dir">Current Directory</a></li
+        ></nav>
+    </td>
+</tr>
+<tr>
+	<td>
+    <div class="new1"><a href="#"><img src="pictures/folder_titanic.png" width="80" height="100" /></a></div>
+    <div class="new1col2"><a href="#"><img src="pictures/folder_spiderman.png" width="80" height="100" /></a></div>
+    <div class="new1col3"><a href="#"><img src="pictures/file_mall.png" width="100" height="100" /></a></div>
+    <div class="new2"><a href="#"><img src="pictures/folder_walk.png" width="80" height="100" /></a></div>
+    <div class="new2col2"><a href="#"><img src="pictures/file_bday.png" width="100" height="100" /></a></div>
+    <div class="new3"><a href="#"><img src="pictures/folder_italian.png" width="80" height="100" /></a></div>
+    <div class="new4"><a href="#"><img src="pictures/file_cloud.png" width="100" height="100" /></a></div>
+    <div class="new5"><a href="#"><img src="pictures/folder_breakfast.png" width="80" height="100" /></a></div>
+	<div class="new5col2"><a href="#"><img src="pictures/folder_starwars.png" width="80" height="100" /></a></div>
+	<div class="new5col3"><a href="#"><img src="pictures/file_spring.png" width="100" height="100" /></a></div>
+    </td>
+</tr>
+<tr>
+	<td rowspan="4">
+        <script type="text/javascript">
+		var timeline = new timeline();
+		var date = new Array();
+		timeline.write_date(date);
+		var visible = new Array();
+		</script>
+        <nav id="date_selector">
+        	<ul>  
+            	<li style="margin-left:25px"></li>
+                <li style="margin-top:500px"><a href="#" id="0">haha</a></li>
+                <li style="margin-left:25px"></li>
+                <li style="margin-top:500px"><a href="#" id="1">haha</a></li>
+                <li style="margin-left:25px"></li>
+                <li style="margin-top:500px"><a href="#" id="2">haha</a></li>
+                <li style="margin-left:25px"></li>
+                <li style="margin-top:500px"><a href="#" id="3">haha</a></li>
+                <li style="margin-left:25px"></li>
+                <li style="margin-top:500px"><a href="#" id="4">haha</a></li>
+                <li style="margin-left:25px"></li>
+                <li style="margin-top:500px"><a href="TimelineNew.html" id="5">.....</a></li>
+            <script type="text/javascript">
+			var months = new Array("Jan. ","Feb. ","Mar. ","Apr. ","May. ","Jun. ","Jul. ","Aug. ","Sep. ","Oct. ","Nov. ","Dec. ");
+			var years = new Array("2009","2010","2011");
+			var k = 0;
+			var temp = Array();
+			var date = Array();
+			for(j = 0; j<years.length; j++){
+				for (i = 0; i < 12; i++){
+					temp[k] = months[i]+years[j];
+					k++;
+				}
+			}
+			var count = Math.floor(temp.length/8);
+			k = 0;
+			for(i=0; i<5; i++){
+				date[k] = temp[i];
+				k++;
+			}
+			for(k = 0; k<5; k++){
+			document.getElementById(k).innerHTML=date[k];	
+			}
+			
+            </script>  
+
+            </ul>
+        </nav>
+	</td>
+	<td>
+	<div class="buttons"><a href="byType.html"><img src="pictures/type_icon.png" name = "b1" height="100" 
+    onMouseOver="document.images['b1'].src='pictures/type_icon_hover.png'"
+	onMouseOut="document.images['b1'].src='pictures/type_icon.png'" /></a></div>
+    <a href="byType.html" class="button_labels"
+    onMouseOver="document.images['b1'].src='pictures/type_icon_hover.png'"
+	onMouseOut="document.images['b1'].src='pictures/type_icon.png'">By Type</a>
+	</td>
+</tr>
+<tr>
+	<td>
+	<div class="buttons"><a href="Frequency.html"><img src="pictures/freq_icon.png" name = "b2" height="100"
+     onMouseOver="document.images['b2'].src='pictures/freq_icon_hover.png'"
+	 onMouseOut="document.images['b2'].src='pictures/freq_icon.png'"/></a></div>
+    <a href="Frequency.html" class="button_labels" 
+     onMouseOver="document.images['b2'].src='pictures/freq_icon_hover.png'"
+	 onMouseOut="document.images['b2'].src='pictures/freq_icon.png'">By Frequency</a>
+	</td>
+</tr>
+<tr>
+	<td id="current">
+	<div class="buttons"><a href="#"><img src="pictures/timeline.png" name = "b3" height="100"
+     onMouseOver="document.images['b3'].src='pictures/timeline_hover.png'"
+	 onMouseOut="document.images['b3'].src='pictures/timeline.png'"/></a></div>
+    <a href="#" class="button_labels"
+     onMouseOver="document.images['b3'].src='pictures/timeline_hover.png'"
+	 onMouseOut="document.images['b3'].src='pictures/timeline.png'">By Date Added</a>
+	</td>
+</tr>
+<tr>
+	<td>
+	<div class="buttons"><a href="Help.html"><img src="pictures/help_icon.png" height="60"></a></div>
+	</td>
+</tr>
+
+
+</table>
+<section id="files-on-timeline">
+  <ul id="timeline-data">
+    <li id="file1">
+      <h3 class="filename">file1</h3>
+      <div class="specific-data">
+        <h4>is directory</h4>
+        <span class="if_directory" title="ifdir1">no</span> 
+        <h4>size</h4>
+        <span class="file-size" title="fs1">13KB</span> 
+     	<h4>Date-Modified</h4>
+        <span class="day-modified" title="dm1">25</span>
+        <span class="month-modified" title="mm1">Jan</span>
+        <span class="year-modified" title="ym1">2011</span>
+      </div>
+  </ul>
+</section>
+</body>
+</html>

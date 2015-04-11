@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>Disk Analyzer: By Type</title>
+<link rel="stylesheet" href="popUpType.css" />
+</head>
+
+<body>
+<div class="box">
+
+<table id="layout">
+<tr>
+	<td width = "650" align="left">
+    	<nav id="top_button">       
+        	<li><a href="#" class="current_dir">Last Directory</a></li>
+            <li><a href="#" class="current_dir">Current Directory</a></li
+        ></nav>
+    </td>
+    <td>        </td>
+</tr>
+<tr>
+	<td rowspan="4" >
+	<div class="analyze-box">
+		<table rules="rows" id="data"> 
+		<tr>
+        	<td id="left_td"><button type="button" onclick="window.location='byType2.html'">Back</button></td>
+            <td id="right_td"><button type="button" onclick="window.location='byType2.html'">Undo</button></td>
+        </tr>
+        <tr>
+        	<td id="left_td"><input type="checkbox" name="two"> Day At the Mall</td>
+            <td id="right_td">25 MB</td>
+        </tr>
+        <tr>
+        	<td id="left_td"><input type="checkbox" name="two"> Alex's Birthday </td>
+            <td id="right_td">40 MB</td>
+        </tr>
+        <tr>
+        	<td id="left_td"><input type="checkbox" name="two"> A Walk To Remember</td>
+            <td id="right_td">523 MB</td>
+        </tr>
+        <tr>
+        	<td id="left_td"><input type="checkbox" name="two"> Spiderman 3</td>
+            <td id="right_td">678 MB</td>
+        </tr>
+        <tr>
+        	<td id="left_td"><input type="checkbox" name="two"> Paranormal Activity</td>
+            <td id="right_td">610 MB</td>
+        </tr>
+        <tr>
+        	<td id="left_td"><input type="checkbox" name="two"> First Steps</td>
+            <td id="right_td">13 MB</td>
+        </tr>
+        <tr>
+        	<td id="left_td"><input type="checkbox" name="two"> Science Recording</td>
+            <td id="right_td">30 MB</td>
+        </tr>
+        <tr>
+        	<td id="left_td"><button type="button">Delete</button></td>
+            <td id="right_td"><button type="button">Open</button></td>
+        </tr>
+        </table>
+	</div>
+	</td>
+	<td id="current">
+	<div class="buttons"><a href="byType.html"><img src="pictures/type_icon.png" name = "b1" height="100" 
+    onMouseOver="document.images['b1'].src='pictures/type_icon_hover.png'"
+	onMouseOut="document.images['b1'].src='pictures/type_icon.png'" /></a></div>
+    <a href="/" class="button_labels"
+    onMouseOver="document.images['b1'].src='pictures/type_icon_hover.png'"
+	onMouseOut="document.images['b1'].src='pictures/type_icon.png'">By Type</a>
+	</td>
+</tr>
+<tr>
+	<td>
+	<div class="buttons"><a href="Frequency.html"><img src="pictures/freq_icon.png" name = "b2" height="100"
+     onMouseOver="document.images['b2'].src='pictures/freq_icon_hover.png'"
+	 onMouseOut="document.images['b2'].src='pictures/freq_icon.png'"/></a></div>
+    <a href="/" class="button_labels" 
+     onMouseOver="document.images['b2'].src='pictures/freq_icon_hover.png'"
+	 onMouseOut="document.images['b2'].src='pictures/freq_icon.png'">By Frequency</a>
+	</td>
+</tr>
+<tr>
+	<td>
+	<div class="buttons"><a href="Timeline.html"><img src="pictures/timeline.png" name = "b3" height="100"
+     onMouseOver="document.images['b3'].src='pictures/timeline_hover.png'"
+	 onMouseOut="document.images['b3'].src='pictures/timeline.png'"/></a></div>
+    <a href="/" class="button_labels"
+     onMouseOver="document.images['b3'].src='pictures/timeline_hover.png'"
+	 onMouseOut="document.images['b3'].src='pictures/timeline.png'">By Date Added</a>
+	</td>
+</tr>
+<tr>
+	<td>
+	<div class="buttons"><a href="Help.html"><img src="pictures/help_icon.png" height="60"></a></div>
+	</td>
+</tr>
+</table>
+
+</div>
+</body>
+</html>

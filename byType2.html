@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>Disk Analyzer: By Type</title>
+<link rel="stylesheet" href="byType2.css" />
+<script type="text/javascript">
+var closetimer	= 0;
+var menuitem	= 0;
+
+function openMenu(id)
+{	
+	mcancelclosetime();
+	if(menuitem) menuitem.style.visibility = 'hidden';
+
+	// get new layer and show it
+	menuitem = document.getElementById(id);
+	menuitem.style.visibility = 'visible';
+}
+// close showed layer
+function closeMenu()
+{
+	if(menuitem) menuitem.style.visibility = 'hidden';
+}
+
+// go close timer
+function closeMenutime()
+{
+	closetimer = window.setTimeout(closeMenu, 500);
+}
+
+// cancel close timer
+function mcancelclosetime()
+{
+	if(closetimer)
+	{
+		window.clearTimeout(closetimer);
+		closetimer = null;
+	}
+}
+document.onclick = closeMenu; 
+</script>
+</head>
+
+<body>
+
+<div class="box">
+
+<table id="layout">
+<tr>
+	<td width = "650" align="left">
+    	<nav id="top_button">
+        	<ul>
+        	<li><a href="" class="current_dir">Last Directory</a></li>
+            <li><a href="" class="current_dir">Current Directory</a></li>
+            
+  			</ul>
+        </nav>
+    </td>
+    <td>        </td>
+</tr>
+<tr>
+	<td rowspan="4" >
+    <div id="boxes">
+        <a href="more.html" class="box_visual">
+       	<div class="curved-box"><a href="#" class="box_visual" onmouseover="openMenu('m2')" onmousout="closeMenu()">
+             <div class="heading1">
+                <div id="word1">.MOV
+                 <div id="m2" style="visibility:hidden" onmouseover="mcancelclosetime()" onmouseout="closeMenutime()">
+    <button type="button" class="button_b" onclick="window.location='popUpType.html'"> Show Content </button>
+    <button type="button" class="button_b"> Analyze Block </button>
+    </div>
+    </div>
+    </div></a>
+   	</div>
+    <!-- Music (17GB)-->
+        </a>
+        
+        <a href="more.html" class="box_visual">
+        <div class="curved-box2"><a href="#" class="box_visual" onmouseover="openMenu('m3')" onmousout="closeMenu()">
+            	<div class="heading2">
+	<div id="word2">.MKV
+            
+            <div id="m3" style="visibility:hidden" onmouseover="mcancelclosetime()" onmouseout="closeMenu()">
+    <button type="button" class="button_b" onclick="window.location='popUpType.html'"> Show Content </button>
+    <button type="button" class="button_b"> Analyze Block </button>
+    </div>
+    </div>
+        </div></a>
+        </div>
+        </a>
+
+<div class="curved-box3"><a href="#" class="box_visual" onmouseover="openMenu('m1')" onmousout="closeMenutime()">
+	<div class="heading3">
+     <div id="word">.WMA
+            <div id="m1" style="visibility:hidden"
+            	onmouseover="mcancelclosetime()"
+                onmouseout="closeMenutime()">
+    <button type="button" class="button_b" onclick="window.location='popUpType.html'"> Show Content </button>
+    <button type="button" class="button_b"> Analyze Block </button>
+    </div>
+    </div>
+</div> </a><!-- Docs (2GB)-->
+    
+</div>     
+	</td>
+	<td id="current">
+	<div class="buttons"><a href="byType.html"><img src="pictures/type_icon.png" name = "b1" height="100" 
+    onMouseOver="document.images['b1'].src='pictures/type_icon_hover.png'"
+	onMouseOut="document.images['b1'].src='pictures/type_icon.png'" /></a></div>
+    <a href="byType.html" class="button_labels"
+    onMouseOver="document.images['b1'].src='pictures/type_icon_hover.png'"
+	onMouseOut="document.images['b1'].src='pictures/type_icon.png'">By Type</a>
+	</td>
+</tr>
+<tr>
+	<td>
+	<div class="buttons"><a href="Frequency.html"><img src="pictures/freq_icon.png" name = "b2" height="100"
+     onMouseOver="document.images['b2'].src='pictures/freq_icon_hover.png'"
+	 onMouseOut="document.images['b2'].src='pictures/freq_icon.png'"/></a></div>
+    <a href="Frequency.html" class="button_labels" 
+     onMouseOver="document.images['b2'].src='pictures/freq_icon_hover.png'"
+	 onMouseOut="document.images['b2'].src='pictures/freq_icon.png'">By Frequency</a>
+	</td>
+</tr>
+<tr>
+	<td>
+	<div class="buttons"><a href="Timeline.html"><img src="pictures/timeline.png" name = "b3" height="100"
+     onMouseOver="document.images['b3'].src='pictures/timeline_hover.png'"
+	 onMouseOut="document.images['b3'].src='pictures/timeline.png'"/></a></div>
+    <a href="Timeline.html" class="button_labels"
+     onMouseOver="document.images['b3'].src='pictures/timeline_hover.png'"
+	 onMouseOut="document.images['b3'].src='pictures/timeline.png'">By Date Added</a>
+	</td>
+</tr>
+<tr>
+	<td>
+	<div class="buttons"><a href="Help.html"><img src="pictures/help_icon.png" height="60"></a></div>
+	</td>
+</tr>
+</table>
+
+</div>
+</body>
+</html>

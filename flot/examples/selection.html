@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+ <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Flot Examples</title>
+    <link href="layout.css" rel="stylesheet" type="text/css">
+    <script language="javascript" type="text/javascript" src="../flot/jquery.js"></script>
+    <script language="javascript" type="text/javascript" src="../flot/jquery.flot.js"></script>
+    <script language="javascript" type="text/javascript" src="../flot/jquery.flot.selection.js"></script>
+ </head>
+    <body>
+    <h1>Flot Examples</h1>
+
+    <div id="placeholder" style="width:600px;height:300px"></div>
+
+<script type="text/javascript">
+$(function () {
+    var data = [
+        {
+            label: "Frequency",
+			data: [[2, 1], [4, 3], [8, .05], [12, 2], [16, 5], [20, .25], [25, .75]]
+        },
+    ];
+
+    var options = {
+        series: {
+            lines: { show: true },
+            points: { show: true }
+        },
+        legend: { noColumns: 2 },
+        xaxis: {text: 'Temperature'},
+        yaxis: { min: 0 },
+        selection: { mode: "x" }
+    };
+
+    var placeholder = $("#placeholder");
+
+    placeholder.bind("plotselected", function (event, ranges) {
+        $("#selection").text(ranges.xaxis.from.toFixed(1) + " to " + ranges.xaxis.to.toFixed(1));
+
+        var zoom = $("#zoom").attr("checked");
+        if (zoom)
+            plot = $.plot(placeholder, data,
+                          $.extend(true, {}, options, {
+                              xaxis: { min: ranges.xaxis.from, max: ranges.xaxis.to }
+                          }));
+    });
+
+    placeholder.bind("plotunselected", function (event) {
+        $("#selection").text("");
+    });
+    
+    var plot = $.plot(placeholder, data, options);
+
+    $("#clearSelection").click(function () {
+        plot.clearSelection();
+    });
+});
+</script>
+
+ </body>
+</html>

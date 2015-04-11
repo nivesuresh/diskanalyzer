@@ -1,0 +1,176 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	margin:0px;
+}
+.box {
+	border: 1px solid black;
+	width:900px;
+	height:650px;
+	margin-left:0px;
+	margin-top:0px;
+	background-color:#333;
+}
+
+#drop-down h1
+{
+	color: #FFF;
+	font-weight:bold;
+	text-decoration: none;
+	font-size:16px;}
+#layout {
+	border:none;
+	float:right;
+	margin-top: 30px;
+	margin-right: 20px;
+	text-align: center;
+}
+.buttons {
+	margin-top:14px;
+
+}
+
+#current{
+	opacity:0.4;
+	filter:alpha(opacity=40);
+}
+
+
+.button_labels{
+	color:#FFF;
+	font-family:Tahoma, Geneva, sans-serif;
+	margin-top: 2px;
+	margin-bottom: 10px;
+	font-weight:bold;
+	text-decoration:none;
+
+
+}
+
+#boxes{
+
+}
+#top_button ul{
+	list-style-type:none;
+	padding: 0;
+	margin: 0;
+}
+
+#top_button li{
+	margin: 0px;
+	padding: 2px;
+	float:left;
+	list-style-type:none;
+	font:Tahoma, Geneva, sans-serif;
+}
+	
+
+#top_button li a{
+	display: block;
+	display:inline;
+	padding-right: 7px;
+	padding-left: 7px;
+	padding-bottom: 4px;
+	padding-top: 2px;
+	background-color:#C03;
+	color:#FFF;
+	text-align:left;
+	text-decoration:none;
+	width:relative;
+	height:auto;
+	font-family:Tahoma, Geneva, sans-serif
+}
+#top_button li a:hover{
+	background-color: #F66;
+}
+.curved-box{
+	position: relative; 
+	background-color:#F33;
+	 width: 270px;
+	 height:200px;
+	 margin-left:10px;
+	 -webkit-border-radius: 1px;
+	 -moz-border-radius: 10px;
+     border-radius: 10px;
+}
+
+.curved-box2 {
+	background-color:#636;
+	 width: 270px;
+	 height:200px;
+	 margin-left:10px;
+	 margin-top:10px;
+	 -webkit-border-radius: 1px;
+	 -moz-border-radius: 10px;
+     border-radius: 10px;
+}
+
+.curved-box3 {
+	background-color:#099;
+	 width: 270px;
+	 height:410px;
+	 margin-left:290px;
+	 margin-top:-410px;
+	 -webkit-border-radius: 1px;
+	 -moz-border-radius: 10px;
+     border-radius: 10px;
+}
+.box_visual{
+	text-decoration:none;
+	color:#FFF;
+}
+.heading1 {
+	font-size:18px;	
+	text-align:center;
+	font-weight:bold;
+	padding-top:80px;
+	font-family:Tahoma, Geneva, sans-serif;
+}
+
+.heading2 {
+	font-size:18px;	
+	text-align:center;
+	font-weight:bold;
+	padding-top:80px;
+	font-family:Tahoma, Geneva, sans-serif;
+}
+.heading3 {
+	font-size:18px;	
+	text-align:center;
+	font-weight:bold;
+	padding-top:170px;
+	font-family:Tahoma, Geneva, sans-serif;
+}
+
+.content3 {
+	font-size:14px;
+	text-align:center;
+	font-family:Tahoma, Geneva, sans-serif;
+}
+
+.button_b {
+	alignment-adjust:auto;
+	border:none;
+	color:#FFF;
+	opacity:0.8;
+	background:#333;
+	filter:alpha(opacity = 40);
+	font-size:18px;
+	font:Tahoma, Geneva, sans-serif;
+}
+
+.button_b {
+	alignment-adjust:auto;
+	border:none;
+	color:#FFF;
+	opacity:0.8;
+	background:#333;
+	filter:alpha(opacity = 40);
+	font-size:18px;
+	font:Tahoma, Geneva, sans-serif;
+}
+
+.button_b:hover {
+	background:#fff;
+	color: #000
+}

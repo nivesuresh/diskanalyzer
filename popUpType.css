@@ -1,0 +1,104 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	margin:0;
+}
+.box {
+	border: 1px solid black;
+	width:900px;
+	height:650px;
+	margin-left:0px;
+	margin-top:0px;
+	background-color:#333;
+}
+
+#drop-down h1 {
+	color: #FFF;
+	font-weight:bold;
+	text-decoration: none;
+	font-size:16px;
+}
+
+#layout {
+	border:none;
+	float:right;
+	margin-top: 30px;
+	margin-right: 20px;
+	text-align: center;
+}
+
+.buttons {
+	margin-top:14px;
+}
+
+.button_labels{
+	color:#FFF;
+	font-family:Tahoma, Geneva, sans-serif;
+	margin-top: 2px;
+	margin-bottom: 10px;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+#current{
+	opacity:0.4;
+	filter:alpha(opacity=40);
+}
+
+#top_button ul{
+	list-style-type:none;
+	padding: 0;
+	margin: 0;
+}
+
+#top_button li{
+	margin: 0px;
+	padding: 2px;
+	float:left;
+	list-style-type:none;
+	font:Tahoma, Geneva, sans-serif;
+}
+	
+#top_button li a{
+	display: block;
+	display:inline;
+	padding-right: 7px;
+	padding-left: 7px;
+	padding-bottom: 4px;
+	padding-top: 2px;
+	background-color:#C03;
+	color:#FFF;
+	text-align:left;
+	text-decoration:none;
+	width:relative;
+	height:auto;
+	font-family:Tahoma, Geneva, sans-serif
+}
+
+#top_button li a:hover{
+	background-color: #F66;
+}
+
+.analyze-box{
+	margin: 10px;
+}
+
+.analyze-box #data {
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	background-color:#FFFF66;
+	-webkit-border-radius: 1px;
+	 -moz-border-radius: 10px;
+     border-radius: 10px;
+	width:350px;
+	margin-left:150px;
+}
+
+.analyze-box #left_td{
+	text-align: left;
+}
+
+.analyze-box #right_td{
+	text-align: right;
+}
+	
+	

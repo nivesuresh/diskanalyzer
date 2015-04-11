@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Disk Analyzer: By Freqyency</title>
+<link rel="stylesheet" href = "frequency.css">
+<link href="layout.css" rel="stylesheet" type="text/css">
+    <script language="javascript" type="text/javascript" src="flot/jquery.js"></script>
+    <script language="javascript" type="text/javascript" src="flot/jquery.flot.js"></script>
+    <script language="javascript" type="text/javascript" src="flot/jquery.flot.selection.js"></script>
+
+</head>
+
+<body>
+<div class="box">
+<table id="layout">
+<tr>
+	<td width = "650" align="left">
+    	<nav id="top_button">
+        	<ul>
+        	<li><a href="" class="current_dir">Last Directory</a></li>
+            <li><a href="" class="current_dir">Current Directory</a></li>
+            
+  			</ul>
+        </nav>
+    </td>
+</tr>
+<tr>
+	<td rowspan="4">
+    <p id="size" align="left"> Size </p>
+<div id="placeholder" style="width:600px;height:300px">
+
+<script type="text/javascript">
+$(function () {
+    var file = [];
+    for (var i = 0; i < 30; i += 1) {
+        file.push([i, 8*Math.random()/(i+2)]);
+ 
+    }
+
+    var plot = $.plot($("#placeholder"),
+           [ { data: file}], {
+               series: {
+                   lines: { show: true },
+                   points: { show: true },
+				   color: '#C03234',
+				   label: "files"
+               },
+			   legend: {show:false},
+               grid: { hoverable: true, clickable: true },
+               yaxis: {color: '#fff', },
+			   xaxis:{color: '#fff', }
+			
+             });
+			 
+
+    function showTooltip(x, y, contents) {
+        $('<div id="tooltip">' + contents + '</div>').css( {
+            position: 'absolute',
+            display: 'none',
+            top: y + 10,
+            left: x + 10,
+            border: '1px solid #fdd',
+            padding: '2px',
+            'background-color': '#fee',
+            opacity: 0.80
+        }).appendTo("body").fadeIn(200);
+    }
+
+    var previousPoint = null;
+    $("#placeholder").bind("plothover", function (event, pos, item) {
+        $("#x").text(pos.x.toFixed(2));
+        $("#y").text(pos.y.toFixed(2));
+
+       
+            if (item) {
+                if (previousPoint != item.dataIndex) {
+                    previousPoint = item.dataIndex;
+                    
+                    $("#tooltip").remove();
+                    var x = item.datapoint[0],
+                        y = item.datapoint[1].toFixed(2);
+                    showTooltip(item.pageX, item.pageY,
+                                "Total space " + y + "G");
+								
+                }
+        
+        }
+    });
+
+    $("#placeholder").bind("plotclick", function (event, pos, item) {
+        if (item) {
+            $("#clickdata").text("You clicked point " + item.dataIndex + " in " + item.series.label + ".");
+            plot.highlight(item.series, item.datapoint);
+        }
+    });
+});
+</script>
+    </div>
+    <p id="never">Never</p>
+    <p id="often">Often</p>
+	</td>
+	<td>
+	<div class="buttons"><a href="byType.html"><img src="pictures/type_icon.png" name = "b1" height="100" 
+    onMouseOver="document.images['b1'].src='pictures/type_icon_hover.png'"
+	onMouseOut="document.images['b1'].src='pictures/type_icon.png'" /></a></div>
+    <a href="byType.html" class="button_labels"
+    onMouseOver="document.images['b1'].src='pictures/type_icon_hover.png'"
+	onMouseOut="document.images['b1'].src='pictures/type_icon.png'">By Type</a>
+	</td>
+</tr>
+<tr>
+	<td id="current">
+	<div class="buttons"><a href="#"><img src="pictures/freq_icon.png" name = "b2" height="100"
+     onMouseOver="document.images['b2'].src='pictures/freq_icon_hover.png'"
+	 onMouseOut="document.images['b2'].src='pictures/freq_icon.png'"/></a></div>
+    <a href="#" class="button_labels" 
+     onMouseOver="document.images['b2'].src='pictures/freq_icon_hover.png'"
+	 onMouseOut="document.images['b2'].src='pictures/freq_icon.png'">By Frequency</a>
+	</td>
+</tr>
+<tr>
+	<td>
+	<div class="buttons"><a href="Timeline.html"><img src="pictures/timeline.png" name = "b3" height="100"
+     onMouseOver="document.images['b3'].src='pictures/timeline_hover.png'"
+	 onMouseOut="document.images['b3'].src='pictures/timeline.png'"/></a></div>
+    <a href="Timeline.html" class="button_labels"
+     onMouseOver="document.images['b3'].src='pictures/timeline_hover.png'"
+	 onMouseOut="document.images['b3'].src='pictures/timeline.png'">By Date Added</a>
+	</td>
+</tr>
+<tr>
+	<td>
+	<div class="buttons"><a href="Help.html"><img src="pictures/help_icon.png" height="60"></a></div>
+	</td>
+</tr>
+
+
+</table>
+
+</body>
+</html>
