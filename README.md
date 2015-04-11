@@ -1,3 +1,3 @@
 #diskanalyzer
 
-To begin, click on Help.html
+A Disk Analyzing UI prototype to showcase a better UX
